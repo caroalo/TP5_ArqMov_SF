@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>San Francisco Digital</title>
+  <meta name="description" content="Servicios municipales de San Francisco (Córdoba) en tu celular.">
+  <meta name="theme-color" content="#0b5cab">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="net" class="netbar" hidden>Sin conexión: estás viendo datos guardados</div>
+  <header class="top">
+    <button id="back" class="icon-btn" aria-label="Volver" hidden>‹</button>
+    <h1 id="title">San Francisco Digital</h1>
+    <button id="install" class="btn small" hidden>Instalar</button>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <nav class="tabbar" aria-label="Navegación principal">
+    <a href="#/" data-tab=""><span aria-hidden="true">🏠</span>Inicio</a>
+    <a href="#/claims" data-tab="claims"><span aria-hidden="true">📣</span>Reclamos</a>
+    <a href="#/parking" data-tab="parking"><span aria-hidden="true">🅿️</span>Estacionar</a>
+    <a href="#/notifications" data-tab="notifications"><span aria-hidden="true">🔔</span>Alertas<i id="badge" hidden></i></a>
+  </nav>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="lib/leaflet/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
